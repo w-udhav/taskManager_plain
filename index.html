@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Task Manager</h1>
+      <div id="inner_container">
+        <!-- Contains all the task listing and funs-->
+        <!-- Input -->
+        <input
+          type="text"
+          class="search"
+          id="search"
+          placeholder="Search for a task"
+        />
+        <!-- Filter by -->
+        <div class="filter">
+          <label for="filter">Filter by</label>
+          <select name="filter" id="filter">
+            <option value="all">All</option>
+            <option value="completed">Completed</option>
+            <option value="uncompleted">Uncompleted</option>
+          </select>
+        </div>
+
+        <div class="divider"></div>
+
+        <!-- Task listing -->
+        <div class="listing">
+          <button id="addTask">Add Task</button>
+
+          <!-- Only displays when clicking Add Task button -->
+          <div id="addTask_component" class="hidden">
+            <!-- Name -->
+            <div>
+              <label for="name">Task Name</label>
+              <input type="text" id="name" />
+            </div>
+            <div>
+              <label for="cat">Category</label>
+              <select name="cat" id="cat">
+                <option value="">select</option>
+                <option value="work">Work</option>
+                <option value="personal">Personal</option>
+                <option value="shopping">Shopping</option>
+                <option value="others">Others</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">Date</label>
+              <input type="date" id="date" />
+            </div>
+            <button id="doneBtn">Done</button>
+          </div>
+          <!-- view -->
+          <div class="view"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
